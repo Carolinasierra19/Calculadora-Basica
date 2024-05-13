@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <!-- TextView para mostrar "Calculadora Básica" -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculadora Básica"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- CardView para el primer número -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewNumber1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+        app:cardCornerRadius="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- EditText para el primer número -->
+            <EditText
+                android:id="@+id/editTextNumber1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese el primer numero"
+                android:inputType="numberDecimal"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- CardView para el segundo número -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewNumber2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardViewNumber1"
+        app:cardCornerRadius="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- EditText para el segundo número -->
+            <EditText
+                android:id="@+id/editTextNumber2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese el segundo Numero"
+                android:inputType="numberDecimal"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/buttonSumar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Sumar"
+        app:layout_constraintEnd_toEndOf="@+id/cardViewNumber1"
+        app:layout_constraintStart_toStartOf="@+id/cardViewNumber1"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewNumber2"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/buttonRestar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Restar"
+        app:layout_constraintEnd_toEndOf="@+id/cardViewNumber2"
+        app:layout_constraintStart_toStartOf="@+id/cardViewNumber2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSumar"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/buttonMultiplicar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Multiplicar"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSumar"
+        app:layout_constraintStart_toStartOf="@+id/buttonSumar"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRestar"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/buttonDividir"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Dividir"
+        app:layout_constraintEnd_toEndOf="@+id/buttonMultiplicar"
+        app:layout_constraintStart_toStartOf="@+id/buttonMultiplicar"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMultiplicar"
+        android:layout_marginBottom="8dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
